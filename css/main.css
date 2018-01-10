@@ -1,0 +1,105 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	cursor: default;
+	font-family: sans-serif;
+	display: grid;
+	align-items: center;
+	background-color: #03A9F4;
+}
+
+
+.drum-container {
+	max-width: 800px;
+	padding: 16px;
+	margin: 0px auto;
+	background-color: #212121;
+	border: 8px solid #000;
+	border-radius: 8px;
+	box-shadow: 0px 2px 10px 2px #212121;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1.2fr 1fr;
+	grid-gap: 10px;
+	grid-template-areas: 
+		"hihat-open cymbal-left cymbal-right ride"
+		"kick kick snare snare"
+		"hihat-closed tom-1 tom-2 tom-3";
+}
+
+.drum-element {
+	min-height: 150px;
+	padding: 0px 32px;
+	border: 2px solid #212121;
+	border-radius: 16px;
+	transition: all 75ms cubic-bezier(0.23, 1, 0.32, 1);
+	text-align: center;
+	cursor: pointer;
+	display: grid;
+	align-content: center;
+	user-select: none;
+	background-color: #FFF;
+	color: #212121;
+	box-shadow: inset 0px 0px 24px 0px black;
+}
+
+.drum-element h1 {
+	font-size: 1.5rem;
+	margin-bottom: 0px;
+}
+
+.drum-element h2 {
+	margin-bottom: 0px;
+	font-size: 1.25rem;
+	font-family: monospace
+}
+
+
+.snare {
+	grid-area: snare;
+}
+
+.kick {
+	grid-area: kick;
+}
+
+.tom-1 {
+	grid-area: tom-1;
+}
+
+.tom-2 {
+	grid-area: tom-2;
+}
+
+.tom-3 {
+	grid-area: tom-3;
+}
+
+.hihat-open {
+	grid-area: hihat-open;
+}
+
+.hihat-closed {
+	grid-area: hihat-closed;
+}
+
+.ride {
+	grid-area: ride;
+}
+
+.cymbal-left {
+	grid-area: cymbal-left;
+}
+
+.cymbal-right {
+	grid-area: cymbal-right;
+}
+
+
+.playing {
+	box-shadow: inset 0px 0px 32px 0px black;
+}
